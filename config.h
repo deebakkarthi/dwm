@@ -4,8 +4,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "SF Pro Display:size=13:style=Regular" };
-static const char dmenufont[]       = "SF Pro Display:size=13";
+static const char *fonts[]          = {"mono:size=13:style=Regular", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static const char dmenufont[]       = "mono:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -25,9 +25,10 @@ static const Rule rules[] = {
      *  WM_CLASS(STRING) = instance, class
      *  WM_NAME(STRING) = title
      */
-    /* class      instance    title       tags mask     isfloating   monitor */
-    { "Gimp",     NULL,       NULL,       0,            1,           -1 },
-    { "Firefox",  NULL,       NULL,       0,            0,           -1 },
+    /* class          instance    title       tags mask     isfloating   monitor */
+    { "Gimp",         NULL,       NULL,       0,            1,           -1 },
+    { "Firefox",      NULL,       NULL,       0,            0,           -1 },
+    { "kdenlive",     NULL,       NULL,       0,            1,           -1 }
 };
 
 /* layout(s) */
@@ -71,6 +72,7 @@ static Key keys[] = {
     { 0,XF86XK_AudioMute,           spawn,     SHCMD("amixer sset Master toggle ; pkill -RTMIN+1 dwmblocks") },
     { 0,XF86XK_AudioRaiseVolume,    spawn,     SHCMD("amixer sset Master 5%+ ; pkill -RTMIN+1 dwmblocks") },
     { 0,XF86XK_AudioLowerVolume,    spawn,     SHCMD("amixer sset Master 5%- ; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,                       XK_Print,    spawn,       SHCMD("scrot '%Y-%M-%d_%X.png' -q 100 -e 'mv $f /home/deebakkarthi/media/pictures/screenshots/' ") },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
