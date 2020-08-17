@@ -72,7 +72,7 @@ static Key keys[] = {
     { 0,XF86XK_AudioMute,           spawn,     SHCMD("amixer sset Master toggle ; pkill -RTMIN+1 dwmblocks") },
     { 0,XF86XK_AudioRaiseVolume,    spawn,     SHCMD("amixer sset Master 5%+ ; pkill -RTMIN+1 dwmblocks") },
     { 0,XF86XK_AudioLowerVolume,    spawn,     SHCMD("amixer sset Master 5%- ; pkill -RTMIN+1 dwmblocks") },
-    { MODKEY,                       XK_Print,    spawn,       SHCMD("scrot '%Y-%M-%d_%X.png' -q 100 -e 'mv $f /home/deebakkarthi/media/pictures/screenshots/' ") },
+    { MODKEY,                       XK_Print,    spawn,       SHCMD("scrot '%Y-%M-%d_%X.png' -q 100 -e 'mv $f /mnt/hdd/pictures/screenshots/' ") },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
