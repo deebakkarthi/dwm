@@ -5,8 +5,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 1;       /* 1 means swallow floating windows by default*/
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"mono:size=13:style=Regular", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
-static const char dmenufont[]       = "mono:size=13";
+static const char *fonts[]          = {"JetBrains Mono:size=13:style=Regular", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static const char dmenufont[]       = "JetBrains Mono:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -75,7 +75,7 @@ static Key keys[] = {
     { 0,XF86XK_AudioMute,           spawn,     SHCMD("amixer sset Master toggle ; pkill -RTMIN+1 dwmblocks") },
     { 0,XF86XK_AudioRaiseVolume,    spawn,     SHCMD("amixer sset Master 5%+ ; pkill -RTMIN+1 dwmblocks") },
     { 0,XF86XK_AudioLowerVolume,    spawn,     SHCMD("amixer sset Master 5%- ; pkill -RTMIN+1 dwmblocks") },
-    { MODKEY,                       XK_Print,    spawn,       SHCMD("scrot '%Y-%m-%d_%X.png' -e 'mv $f /mnt/hdd/pictures/screenshots/' ") },
+    { MODKEY,                       XK_Print,    spawn,       SHCMD("scrot '%Y-%m-%d_%X.png' -e 'mv $f /home/deebakkarthi/pictures/screenshots/' ") },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
