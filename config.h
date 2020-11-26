@@ -9,8 +9,8 @@ static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows sel
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"JetBrains Mono:size=13:style=Regular", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
-static const char dmenufont[]       = "JetBrains Mono:size=13";
+static const char *fonts[]          = {"Monaco:size=13:style=Regular", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Monaco:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -41,7 +41,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
@@ -110,7 +110,7 @@ static Key keys[] = {
     { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
     { MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("brave --incognito") },
 
-    { MODKEY,                       XK_e,      quit,           {0} },
+    /*{ MODKEY,                       XK_e,      quit,           {0} },*/
     /*{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("") },*/
 
     /*{ MODKEY,                       XK_r,      spawn,          SHCMD("") },*/
@@ -153,7 +153,7 @@ static Key keys[] = {
     { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd} },
     /*{ MODKEY|ShiftMask,             XK_d,      spawn,      SHCMD("") },*/
 
-    /*{ MODKEY,                       XK_f,      spawn,      SHCMD("") },*/
+    { MODKEY,                       XK_f,      fullscreen,     {0}},
     /*{ MODKEY|ShiftMask,             XK_f,      spawn,      SHCMD("") },*/
 
     /*{ MODKEY,                       XK_g,      spawn,      SHCMD("") },*/
