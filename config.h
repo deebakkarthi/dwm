@@ -76,9 +76,9 @@ static Key keys[] = {
     { 0,XF86XK_AudioPrev,           spawn,     SHCMD("mpc prev") },
     { 0,XF86XK_AudioPlay,           spawn,     SHCMD("mpc toggle") },
     { 0,XF86XK_AudioNext,           spawn,     SHCMD("mpc next") },
-    { 0,XF86XK_AudioMute,           spawn,     SHCMD("pamixer  -t  ; pkill -RTMIN+1 dwmblocks") },
-    { 0,XF86XK_AudioRaiseVolume,    spawn,     SHCMD("pamixer -i 5 ; pkill -RTMIN+1 dwmblocks") },
-    { 0,XF86XK_AudioLowerVolume,    spawn,     SHCMD("pamixer -d 5 ; pkill -RTMIN+1 dwmblocks") },
+    { 0,XF86XK_AudioMute,           spawn,     SHCMD("amixer sset Master toggle ; pkill -RTMIN+1 dwmblocks") },
+    { 0,XF86XK_AudioRaiseVolume,    spawn,     SHCMD("amixer sset Master 5%+ ; pkill -RTMIN+1 dwmblocks") },
+    { 0,XF86XK_AudioLowerVolume,    spawn,     SHCMD("amixer sset Master 5%- ; pkill -RTMIN+1 dwmblocks") },
     { MODKEY,                       XK_Print,    spawn,       SHCMD("scrot '%Y-%m-%d_%X.png' -e 'mv $f /home/deebakkarthi/pictures/screenshots/' ") },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
@@ -92,10 +92,10 @@ static Key keys[] = {
     { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
     
-    { MODKEY,                       XK_minus,    spawn,       SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,                       XK_minus,    spawn,       SHCMD("amixer sset Master 5%- ; pkill -RTMIN+1 dwmblocks") },
     /*{ MODKEY|ShiftMask,             XK_minus,    spawn,       SHCMD("") },*/
 
-    { MODKEY,                       XK_equal,    spawn,       SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,                       XK_equal,    spawn,       SHCMD("amixer sset Master 5%+ ; pkill -RTMIN+1 dwmblocks") },
     /*{ MODKEY|ShiftMask,             XK_equal,    spawn,       SHCMD("") },*/
 
     /*{ MODKEY,                       XK_BackSpace, spawn,      SHCMD("") },*/
