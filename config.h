@@ -113,7 +113,7 @@ static Key keys[] = {
     { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
     { MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("brave --incognito") },
 
-    /*{ MODKEY,                       XK_e,      quit,           {0} },*/
+    { MODKEY,                       XK_e,      quit,           {0} },
     /*{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("") },*/
 
     /*{ MODKEY,                       XK_r,      spawn,          SHCMD("") },*/
@@ -234,4 +234,8 @@ static Button buttons[] = {
     { ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
     { ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+/*Quitting*/
+static const int EMPTY_WINDOW_COUNT = 6;
+/*This the number of windows in an empty desktop, this also includes daemons so
+ * the number is higher than 0*/
 
