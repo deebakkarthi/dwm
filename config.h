@@ -69,9 +69,9 @@ static Key keys[] = {
     /*{ 0,XF86XK_Search,spawn,SHCMD("") },*/
     /*{ 0,XF86XK_Calculator,spawn,SHCMD("") },*/
     /*{ 0,XF86XK_Tools,spawn,SHCMD("") },*/
-    /*{ 0,XF86XK_AudioPrev,spawn,SHCMD("") },*/
-    /*{ 0,XF86XK_AudioPlay,spawn,SHCMD("") },*/
-    /*{ 0,XF86XK_AudioNext,spawn,SHCMD("") },*/
+    { 0,XF86XK_AudioPrev,spawn,SHCMD("mpc prev >/dev/null 2>&1") },
+    { 0,XF86XK_AudioPlay,spawn,SHCMD("mpc toggle >/dev/null 2>&1") },
+    { 0,XF86XK_AudioNext,spawn,SHCMD("mpc next >/dev/null 2>&1") },
     { 0,XF86XK_AudioMute,spawn,SHCMD("amixer sset Master toggle >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
     { 0,XF86XK_AudioRaiseVolume,spawn,SHCMD("amixer sset Master 5%+ >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
     { 0,XF86XK_AudioLowerVolume,spawn,SHCMD("amixer sset Master 5%- >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
