@@ -72,9 +72,9 @@ static Key keys[] = {
     { 0,XF86XK_AudioPrev,spawn,SHCMD("mpc prev >/dev/null 2>&1") },
     { 0,XF86XK_AudioPlay,spawn,SHCMD("mpc toggle >/dev/null 2>&1") },
     { 0,XF86XK_AudioNext,spawn,SHCMD("mpc next >/dev/null 2>&1") },
-    { 0,XF86XK_AudioMute,spawn,SHCMD("amixer sset Master toggle >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
-    { 0,XF86XK_AudioRaiseVolume,spawn,SHCMD("amixer sset Master 5%+ >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
-    { 0,XF86XK_AudioLowerVolume,spawn,SHCMD("amixer sset Master 5%- >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
+    { 0,XF86XK_AudioMute,spawn,SHCMD("volcontrol t") },
+    { 0,XF86XK_AudioRaiseVolume,spawn,SHCMD("volcontrol i") },
+    { 0,XF86XK_AudioLowerVolume,spawn,SHCMD("volcontrol d") },
     { MODKEY,XK_Print,spawn,SHCMD("screenshot") },
 
     /*{ MODKEY,XK_grave,spawn,SHCMD()},*/
@@ -92,10 +92,10 @@ static Key keys[] = {
     { MODKEY,XK_0,view,{.ui = ~0 } },
     { MODKEY|ShiftMask,XK_0,tag,{.ui = ~0 } },
 
-    { MODKEY,XK_minus,spawn,SHCMD("amixer sset Master 5%- >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
+    { MODKEY,XK_minus,spawn,SHCMD("volcontrol d") },
     /*{ MODKEY|ShiftMask,XK_minus,spawn,SHCMD("") },*/
 
-    { MODKEY,XK_equal,spawn,SHCMD("amixer sset Master 5%+ >/dev/null 2>&1 && kill -35 $(pidof dwmblocks)") },
+    { MODKEY,XK_equal,spawn,SHCMD("volcontrol i") },
     /*{ MODKEY|ShiftMask,XK_equal,spawn,SHCMD("") },*/
 
     /*{ MODKEY,XK_BackSpace,spawn,SHCMD("") },*/
@@ -132,7 +132,7 @@ static Key keys[] = {
     /*{ MODKEY,XK_o,spawn,SHCMD("") },*/
     /*{ MODKEY|ShiftMask,XK_o,spawn,SHCMD("") },*/
 
-    /*{ MODKEY,XK_p,spawn,SHCMD("") },*/ 
+    { MODKEY,XK_p,spawn,SHCMD("passmenu") },
     /*{ MODKEY|ShiftMask,XK_p,spawn,SHCMD("") },*/
 
     /*{ MODKEY,XK_bracketleft,spawn,SHCMD("") },*/
