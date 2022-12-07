@@ -155,7 +155,7 @@ static Key keys[] = {
     /*{ MODKEY|ShiftMask,XK_d,spawn,SHCMD("") },*/
 
     /*{ MODKEY,XK_f,spawn,SHCMD("")},*/
-    /*{ MODKEY|ShiftMask,XK_f,spawn,SHCMD("") },*/
+    { MODKEY|ShiftMask,XK_f,togglefullscr,{0}},
 
     /*{ MODKEY,XK_g,spawn,SHCMD("") },*/
     /*{ MODKEY|ShiftMask,XK_g,spawn,SHCMD("") },*/
