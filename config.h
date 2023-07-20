@@ -96,7 +96,7 @@ static Key keys[] = {
     /*{ MODKEY|ShiftMask,XK_minus,spawn,SHCMD("") },*/
 
     { MODKEY,XK_equal,spawn,SHCMD("volcontrol i") },
-    /*{ MODKEY|ShiftMask,XK_equal,spawn,SHCMD("") },*/
+    { MODKEY|ShiftMask,XK_equal,spawn,SHCMD("volcontrol t") },
 
     /*{ MODKEY,XK_BackSpace,spawn,SHCMD("") },*/
     /*{ MODKEY|ShiftMask,XK_BackSpace,spawn,SHCMD("") },*/
