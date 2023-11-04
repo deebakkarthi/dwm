@@ -148,7 +148,7 @@ static Key keys[] = {
     /*{ MODKEY|ShiftMask,XK_a,spawn,SHCMD("") },*/
 
     /*{ MODKEY,XK_s,spawn,SHCMD("") },*/
-    /*{ MODKEY|ShiftMask,XK_s,spawn,SHCMD("") },*/
+    { MODKEY|ShiftMask,XK_s,spawn,SHCMD("screenshot") },
 
 
     { MODKEY,XK_d,spawn,{.v = dmenucmd} },

@@ -1316,7 +1316,18 @@ propertynotify(XEvent *e)
 void
 quit(const Arg *arg)
 {
-	running = 0;
+	FILE *pp = popen("dwmctl", "r");
+	if (pp != NULL){
+		char buf[1024];
+		if (fgets(buf, sizeof(buf), pp) == NULL) {
+			fprintf(stderr, "Quitprompt: Error reading pipe!\n");
+			return;
+		}
+		if (strcmp(buf, "Yes\n") == 0) {
+			pclose(pp);
+			running = 0;
+		}
+	}
 }
 
 Monitor *
